@@ -1,5 +1,0 @@
-qrcode
-psycopg2
-PyPDF2
-PIL
-os
