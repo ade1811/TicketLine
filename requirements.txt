@@ -1,0 +1,6 @@
+qrcode
+psycopg2
+io
+PyPDF2
+PIL
+os
