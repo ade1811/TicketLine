@@ -16,6 +16,9 @@ class CheckMatrix():
         matrix = self.crs.fetchall()
 
         if len(matrix) == 1:
+            query = "DELETE FROM adimentional WHERE CodiceBiglietto = '"+str(self.matricola)+"'"
+            self.crs.execute(query)
+            self.engine.commit()
             return True
         else:
             return False
