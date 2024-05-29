@@ -2,8 +2,7 @@ from CheckCredentials import CheckCredential
 from GenerateTickets import GenerateTicket
 from CheckMatrix import CheckMatrix
 
-from flask import Flask, send_file, request, url_for, redirect, flash
-from pyzbar.pyzbar import decode
+from flask import Flask, send_file, request, url_for, redirect
 
 app = Flask(__name__)
 
@@ -34,6 +33,7 @@ def generate():
 
     img_path = gen.generate()
     return send_file(img_path, as_attachment = True)
+
 
 @app.route('/decode_qr', methods=['GET', 'POST'])
 def decode_qr():
